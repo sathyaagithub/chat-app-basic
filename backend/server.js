@@ -7,6 +7,9 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
+
+const cors=require('cors')
+app.use(cors())
 /**
  * 
  * http.createServer(): This method from the http module in Node.js creates an HTTP server.
