@@ -2,6 +2,8 @@
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
+const dotenv=require('dotenv')
+dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
@@ -95,6 +97,6 @@ socket.on('disconnect', () => { ... }):
 This runs when a user disconnects from the server (closes their browser or loses connection).
 The code logs, “User disconnected,” along with the user’s socket.id. */
 
-server.listen(4000, () => {
+server.listen(process.env.PORT, () => {
     console.log('Server running on http://localhost:4000');
 });
