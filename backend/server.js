@@ -43,7 +43,7 @@ By creating server manually, you can pass it to the Socket.io server and listen 
  */
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000', // Allow requests from React dev server
+        origin: 'https://elegant-kringle-5cae9e.netlify.app/', // Allow requests from React dev server
         methods: ['GET', 'POST'],
     },
     /**Server: This is the part of Socket.io that helps set up a way for users (clients) and the server to talk to each other in real-time (like everyone shouting at the party and being heard immediately).
